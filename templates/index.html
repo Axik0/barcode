@@ -1,0 +1,32 @@
+{% extends 'custombase.html' %}
+
+{% block title %}
+BarCode
+{% endblock %}
+
+{% block content %}
+<div class="card text-center">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    {% if input_text %}
+    <p class="card-text"></p>
+      <textarea autofocus name="text" form="text_area" rows="3" cols="40" maxlength="120" placeholder="Input your text..."></textarea>
+      <form id='text_area' method = "POST">
+      <input class="submit-butt btn" type="submit" name="text_submit" value='Submit'/>
+      </form>
+    {% else %}
+    <h4 class="card-title">Image processing</h4>
+    <p class="card-text">This web application uses latest Cloudmersive image recognition API to extract data from your barcode. </p>
+      <form method = "POST" enctype = "multipart/form-data">
+      <label for="file-upload" class="upload-butt btn custom-file-upload">Load Image</label>
+      <input id="file-upload" type="file" name = "file" onchange="this.form.submit()"/>
+      <input class="input-butt btn" type="submit" name="gen" value='Generate'/>
+      </form>
+    {% endif %}
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>
+{{ super() }}
+{% endblock %}

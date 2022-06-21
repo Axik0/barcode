@@ -1,0 +1,30 @@
+{% extends 'custombase.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Result
+{% endblock %}
+
+{% block content %}
+{% if encoded %}
+<div class="container">
+  <div class="d-flex justify-content-center row mx-1 my-1">
+    <div class="col-sm-3 card text-center" >
+      <blockquote class="blockquote mx-1">
+      <p class="card-title mt-2">Save your QR code</p>
+      <img src="{{ encoded }}" class="card-img img-fluid rounded" alt="Responsive image">
+    </blockquote>
+    </div>
+  </div>
+</div>
+{% elif decoded %}
+<div class="container">
+    <div class="d-flex justify-content-center text-center row mx-1 my-1">
+       <h3 class="my-2">Type: {{ decoded['barcode_type'] }}</h3>
+        <h3 class="my-2"> {{ decoded['raw_text'] }}</h3>
+    </div>
+</div>
+{% endif %}
+{{ super() }}
+{% endblock %}
+

@@ -1,0 +1,77 @@
+.bi {font-size: 30px; }
+
+body, .card {
+background-color: #afd3f7;
+background-image: linear-gradient(62deg, #afd3f7 0%, #e2c8fb 100%);
+}
+
+a {
+    color: #DD5E89;
+}
+
+.upload-butt, .submit-butt {
+   background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97  51%, #DD5E89  100%);
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: black;
+   box-shadow: 0 0 20px #ffc8dd;
+   border-radius: 10px;
+   }
+
+.upload-butt:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: white;
+   text-decoration: none;
+ }
+
+.input-butt {
+   background-image: linear-gradient(to right, #FEAC5E 0%, #C779D0  51%, #FEAC5E  100%);
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: black;
+   box-shadow: 0 0 20px #ffc8dd;
+   border-radius: 10px;
+   }
+
+.input-butt:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: white;
+   text-decoration: none;
+ }
+
+
+
+.submit-butt {
+   background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6  51%, #2BC0E4  100%);
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: black;
+   box-shadow: 0 0 20px #ffc8dd;
+   border-radius: 10px;
+   }
+
+.submit-butt:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: white;
+   text-decoration: none;
+ }
+
+input[type="file"] {
+    display: none;
+}
+
+
+
+
