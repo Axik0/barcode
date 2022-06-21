@@ -2,8 +2,9 @@ from __future__ import print_function
 from pprint import pprint
 import cloudmersive_barcode_api_client
 from cloudmersive_barcode_api_client.rest import ApiException
+import os
 
-API_KEY = '8cf3c963-07a7-4cba-a639-622ac1a5c89a'
+API_KEY = os.environ.get('API_KEY')
 
 configuration = cloudmersive_barcode_api_client.Configuration()
 configuration.api_key['Apikey'] = API_KEY
